@@ -1,4 +1,7 @@
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="false"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html>
@@ -35,19 +38,12 @@
 </style>
 </head>
 
-
 <body>
-
 	<div class="container">
 		<div class="d-flex justify-content-center h-100">
 			<div class="card">
 				<div class="card-header">
-					<h3>Sign In</h3>
-					<div class="d-flex justify-content-end social_icon">
-						<span><i class="fab fa-facebook-square"></i></span> <span><i
-							class="fab fa-google-plus-square"></i></span> <span><i
-							class="fab fa-twitter-square"></i></span>
-					</div>
+					<h3>로그인하기</h3>
 				</div>
 				<div class="card-body">
 					<form>
@@ -55,7 +51,7 @@
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input type="text" class="form-control" placeholder="id">
+							<input type="text" class="form-control" placeholder="아이디">
 
 						</div>
 						<div class="input-group form-group">
@@ -63,23 +59,17 @@
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
 							<input type="password" class="form-control"
-								placeholder="password">
-						</div>
-						<div class="row align-items-center remember">
-							<input type="checkbox">Remember Me
+								placeholder="비밀번호">
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Login"
+							<input type="submit" value="로그인"
 								class="btn float-right login_btn">
 						</div>
 					</form>
 				</div>
 				<div class="card-footer">
 					<div class="d-flex justify-content-center links">
-						Don't have an account?<a href="#">Sign Up</a>
-					</div>
-					<div class="d-flex justify-content-center">
-						<a href="#">Forgot your password?</a>
+						회원 가입을 하시겠습니까?<a href="#">가입하기</a>
 					</div>
 				</div>
 			</div>
