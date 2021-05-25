@@ -34,7 +34,7 @@
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 <style>
-     <%@ include file="../../resources/styles.css"%>
+<%@ include file="../../resources/styles.css"%>
 </style>
 </head>
 
@@ -43,10 +43,12 @@
 		<div class="d-flex justify-content-center h-100">
 			<div class="card">
 				<div class="card-header">
-					<h3>로그인하기</h3>
+					<div class="d-flex justify-content-center links">
+						<h3>로그인하기</h3>
+					</div>
 				</div>
-				<div class="card-body">
-					<form>
+				<form>
+					<div class="card-body">
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -58,22 +60,29 @@
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" class="form-control"
-								placeholder="비밀번호">
+							<input type="password" class="form-control" placeholder="비밀번호">
 						</div>
 						<div class="form-group">
 							<input type="submit" value="로그인"
 								class="btn float-right login_btn">
 						</div>
-					</form>
-				</div>
+					</div>
+				</form>
 				<div class="card-footer">
 					<div class="d-flex justify-content-center links">
-						회원 가입을 하시겠습니까?<a href="#">가입하기</a>
+						<input type="button" class="btn btn-warning"
+							onclick="window.location.href='http://localhost:8080/board/join';"
+							value="회원 가입을 하시겠습니까?" />
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+		});
+	</script>
 </body>
 </html>
