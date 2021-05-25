@@ -26,13 +26,18 @@ public class BoardController {
 		log.info("BoardController join >> " + member);
 		
 		service.insert(member);
-		rttr.addFlashAttribute("result", member.getMemID());
+		//rttr.addFlashAttribute("result", member.getMemID());
 		
-		return "redirect:/";
+		return "redirect:/board/list";
 	}
 	
 	@GetMapping(value="/join")
 	public void join() {
+		
+	}
+	
+	@GetMapping("/list")
+	public void list() {
 		
 	}
 	

@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>test: from home</h1>
+<h1>test 빈 리스트</h1>
 </body>
 </html>
