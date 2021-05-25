@@ -10,9 +10,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
@@ -37,9 +39,12 @@ public class HomeController {
 		return "/home";
 	}
 	
+	
 	@PostMapping(value="/")
 	public String home(@RequestParam("id") String id, @RequestParam("pw") String pw) {
-		log.info("test id : " + id + ", pw : " + pw);
-		return "redirect:/board/list";
+		log.info("---------------- test id : " + id + ", pw : " + pw + "-------------------");
+//		var testBool = service.check(id, pw);
+//		log.info("testBool : " + testBool + "------------------------------------");
+		return service.check(id, pw) ? "redirect:/board/list" : "/home";
 	}
 }
